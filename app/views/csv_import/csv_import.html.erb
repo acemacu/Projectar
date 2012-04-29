@@ -25,6 +25,17 @@
    </tr>
 
    <tr>
+     <td>
+      <label for="password_files">
+        Upload the household passwords csv file here:
+      </label>
+     </td>
+     <td >
+       <%= f.file_field :password -%>
+     </td>
+   </tr>
+
+   <tr>
      <td colspan='2'>
        <%= submit_tag 'Submit' -%>
      </td>
