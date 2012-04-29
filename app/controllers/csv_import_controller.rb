@@ -40,7 +40,7 @@ class CsvImportController < ApplicationController
     guest = Person.new
     guest.first_name = Iconv.iconv('utf-8', 'iso8859-1', people[0]).first
     guest.lastname = Iconv.iconv('utf-8', 'iso8859-1', people[1]).first
-    guest.household_id = find_household_id(people[2])
+    guest.household_id = find_household_id(Iconv.iconv('utf-8', 'iso8859-1', people[2]).first)
     people[5] == "Yes" ? guest.child = true : guest.child = false
     guest.save if guest.household_id
   end
