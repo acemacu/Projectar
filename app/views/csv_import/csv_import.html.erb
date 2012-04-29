@@ -1,0 +1,33 @@
+<h1>Import the CSVs</h1>
+
+<%= form_for :dump, :url=>{:controller=>"csv_import", :action=>"house_hold_summary"}, :html => { :multipart => true } do |f| -%>
+ <table>
+   <tr>
+     <td>
+      <label for="dump_file">
+        Upload the household csv file here:
+      </label>
+     </td>
+     <td >
+       <%= f.file_field :file -%>
+     </td>
+   </tr>
+
+   <tr>
+     <td>
+      <label for="guests_file">
+        Upload the guests additional csv file here:
+      </label>
+     </td>
+     <td >
+       <%= f.file_field :guests -%>
+     </td>
+   </tr>
+
+   <tr>
+     <td colspan='2'>
+       <%= submit_tag 'Submit' -%>
+     </td>
+   </tr>
+ </table>
+<% end -%>

@@ -1,0 +1,31 @@
+<h1>Listing households</h1>
+
+<table>
+  <tr>
+	<th>Name</th>
+	<th>Side</th>
+    <th>Password</th>
+    <th>Email</th>
+    <th>Notes</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @households.each do |household| %>
+  <tr>
+	<td><%= household.name %></td>
+	<td><%= get_household_side(household)%>
+    <td><%= household.password %></td>
+    <td><%= household.email %></td>
+    <td><%= household.notes %></td>
+    <td><%= link_to 'Show', household %></td>
+    <td><%= link_to 'Edit', edit_household_path(household) %></td>
+    <td><%= link_to 'Destroy', household, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Household', new_household_path %>

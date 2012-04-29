@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Password:</b>
+  <%= @household.password %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @household.email %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @household.notes %>
+</p>
+
+
+<%= link_to 'Edit', edit_household_path(@household) %> |
+<%= link_to 'Back', households_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  first_name: MyString
+  lastname: MyString
+  child: false
+  have_rspv: false
+  rspv: false
+
+two:
+  first_name: MyString
+  lastname: MyString
+  child: false
+  have_rspv: false
+  rspv: false
